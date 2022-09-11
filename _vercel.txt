@@ -1,0 +1,1 @@
+vc-domain-verify=www.koolute.io,3befe154c0982a69394e

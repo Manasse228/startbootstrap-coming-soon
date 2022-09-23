@@ -1,0 +1,47 @@
+;;
+;; Domain:     koolute.io.
+;; Exported:   2022-09-14 07:07:41
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+koolute.io	3600	IN	SOA	koolute.io root.koolute.io 2041480586 7200 3600 86400 3600
+
+;; A Records
+koolute.io.	1	IN	A	76.76.21.21
+
+;; CNAME Records
+autoconfig.koolute.io.	1	IN	CNAME	privateemail.com.
+autodiscover.koolute.io.	1	IN	CNAME	privateemail.com.
+mail.koolute.io.	1	IN	CNAME	privateemail.com.
+www.koolute.io.	1	IN	CNAME	cname.vercel-dns.com.
+
+;; MX Records
+koolute.io.	1	IN	MX	10 mx2.privateemail.com.
+koolute.io.	1	IN	MX	10 mx1.privateemail.com.
+
+;; SRV Records
+_autodiscover._tcp.koolute.io.	1	IN	SRV	0 0 443 privateemail.com.
+
+;; TXT Records
+default._domainkey.koolute.io.	1	IN	TXT	"v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnut7nMXrrnzAN9+JYPyD47UO/M5aw8Ht7cjHON0A8kVhPV+LUAw2UbDYldaWfJzItxL8ewpEEypbkkFrGw2xPisCOxR91O9ETQZnuP4KYtI4NZYzYNB3RyQYbmcL7rzFflXZZ8FAdgs38mtf0q6f8CZmHvyv6zPtrUzWS8v0yq1ecHxXB9Z0ZNLjsO3ZBWXo3ghjblBsRe/8QnOPABi18fAw4LBnZfVNKNAw9me6tr3NhdNec1FO2AFo8Wf5e8KYm9ToCBRd7AgoH963g7y89z+DR7/ojRvrf7u18+SXmIwOOa26d0aJ33L/OD3F4mCXGyPcmaJNd3gxo4eKPXAvdwIDAQAB"
+koolute.io.	1	IN	TXT	"v=spf1 include:spf.privateemail.com ~all"
